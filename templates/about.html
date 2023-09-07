@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+{% from 'bootstrap5/form.html' import render_form %}
+
+<html>
+	<head>
+		<title>Danny_Tech</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
+		{{ bootstrap.load_css() }}
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="{{ url_for('homepage') }}" class="logo">Danny_Tech</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="{{ url_for('homepage') }}">Home</a></li>
+							<li class="active"><a href="{{ url_for('full_story') }}">About</a></li>
+						</ul>
+						<li><a href="https://twitter.com/Mr_Tetteh_" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.instagram.com/mr.tetteh80/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://github.com/Mr-Tetteh?tab=repositories" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Full<br />
+									Story </h1>
+								</header>
+									<hr />
+<!--								-->
+									<h3>About Me!! 😜</h3>
+									<p>
+										My name is Daniel Nii Ayitey Tetteh and I'm a Ghanaian. I'm a web developer.
+										I completed KNUST SHS in Kumasi Ghana. I am  currently a student at
+										Ghana Communication Technology University Accra. I love to code, sing, listen to music,
+										cook, play fifa, play football with friends and explor new things about computers when I'm free.
+										I'm a Christian.   </p>
+
+
+									<h2>My Picture </h2>
+
+									<img class="my_picture" src="static/images/ picture Small.png">
+
+<!--									<hr />-->
+
+
+							</section>
+
+<!--				&#45;&#45; Footer &ndash;&gt;-->
+					<footer id="footer">
+						<section>
+
+								<div class="fields">
+									<div class="field">
+ 											{{ ckeditor.load() }}
+											{{ ckeditor.config(name='body') }}
+											{{ render_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+									</div>
+<!--									<div class="field">-->
+<!--										<label for="email">Email</label>-->
+<!--										<input type="text" name="email" id="email" />-->
+<!--									</div>-->
+<!--									<div class="field">-->
+<!--										<label for="message">Message</label>-->
+<!--&lt;!&ndash;										<textarea name="message" id="message" rows="3"></textarea>&ndash;&gt;-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								<ul class="actions">-->
+<!--									<li><input type="submit" value="Send Message" /></li>-->
+<!--								</ul>-->
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>Accra, Ghana<br /></p>
+							</section>
+
+							<section>
+								<h3>Email</h3>
+								<p><a href="mailto:danielstay73gmail.com">danielstay73gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://twitter.com/Mr_Tetteh_" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.instagram.com/mr.tetteh80/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://github.com/Mr-Tetteh?tab=repositories" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; 2023</li><li> Design by:Daniel Nii Ayitey Tetteh</li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="static/assets/js/browser.min.js"></script>
+			<script src="static/assets/js/breakpoints.min.js"></script>
+			<script src="static/assets/js/util.js"></script>
+			<script src="static/assets/js/main.js"></script>
+	{{ bootstrap.load_js() }}
+	</body>
+</html>
