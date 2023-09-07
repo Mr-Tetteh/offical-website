@@ -10,12 +10,15 @@ import os
 
 
 
-
-user_email = os.environ.get("user_email")
-password = os.environ.get("password")
+# os.getenv()
+# user_email = os.environ.get("user_email")
+user_email = os.getenv("user_email")
+password = os.getenv("password")
+# password = os.environ.get("password")
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
+app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
+# app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
 ckeditor = CKEditor(app)
 bootstrap = Bootstrap5(app)
 csrf = CSRFProtect(app)
